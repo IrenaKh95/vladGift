@@ -1,0 +1,342 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+    min-height: 100vh;
+} 
+
+footer {
+    text-align: center;
+    background-color: #ffcccb;
+    padding: 10px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    background-color: #ffcccb;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.item {
+    display: flex;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+#img-text-style{
+    display: flex; 
+    align-items: center;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.item img {
+    max-width: 100px;
+    border-radius: 8px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    background-color: #ff8080;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: auto; /* Автоматически сдвигает кнопку вниз */
+}
+
+/* кнопка удаления заказа в корзине */
+
+.nav-button-delete {
+    padding: 10px 20px;
+    background-color: #696969;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: auto; /* Автоматически сдвигает кнопку вниз */
+}
+
+/* кнопка закрытия модалки оформления заказа в корзине */
+.nav-button-close {
+    padding: 10px 20px;
+    background-color: #696969;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: auto; /* Автоматически сдвигает кнопку вниз */
+}
+
+.nav-button:hover {
+    background-color: #ff6666;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    width: 70%;
+    max-width: 500px;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.modal-content p {
+    margin: 10px 0;
+}
+
+.close-modal {
+    background-color: #ff8080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.close-modal:hover {
+    background-color: #ff6666;
+}
+
+/* контейнер для кнопок рядом*/
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    max-width: 800px; 
+    margin: 20px auto; 
+    padding: 10px 0; 
+}
+
+/* Добавление стилей для модального окна, которое появляется с алертом */
+.alert-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000;
+} 
+
+.alert-modal .alert-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    width: 70%;
+    max-width: 500px;
+}
+
+.alert-modal .alert-content p {
+    margin: 10px 0;
+}
+
+.alert-modal .alert-content button {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #ff8080;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.alert-modal .alert-content button:hover {
+    background-color: #ff6666;
+}
+
+
+/* Адаптивные стили */
+@media screen and (max-width: 1632px) {
+    .container {
+        max-width: 1350px;
+    }
+}
+
+@media screen and (max-width: 1248px) {
+    .container {
+        max-width: 900px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .item img {
+        max-width: 80px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .container {
+        max-width: 300px;
+        padding: 10px;
+    }
+
+    .item img {
+        max-width: 80px;
+    }
+
+    .cart-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .slider {
+        width: 300px !important; /* Сужаем слайдер */
+    }
+
+    .slider_img {
+        width: 300px !important;
+    }
+
+    .slider_line {
+        width: 300px !important;
+    }
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Добавляем отступы между элементами формы */
+}
+
+.modal-content textarea {
+    width: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    resize: none;
+    font-size: 1em;
+}
+
+.modal-content ul {
+    list-style: disc;
+    padding-left: 20px; 
+    margin: 10px 0;
+}
+
+
+/* слайдер */
+
+.slider{
+    width: 500px ;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto; /* Отступ сверху и снизу 20px, центрирование */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Лёгкая тень для эффекта объёма */
+}
+
+.slider_line{
+    display: flex;
+    transition: all 1s;
+    width: 500px ;
+}
+
+.slider_img{
+    width: 500px ;
+    flex: 0 0 auto;
+}
+
+/* .slider_btn_prev{
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+
+    color: #ff6666;
+    background-color: transparent;
+    border: 1px solid;
+    line-height: 1;
+}
+
+.slider_btn_next{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+
+    color: #ff6666;
+    background-color: transparent;
+    border: 1px solid;
+    line-height: 1;
+}
+
+.slider_btn_prev:hover, .slider_btn_next:hover{
+    background-color: #696969;
+    color: #ffff;
+    opacity: 1;
+} */
+
+
+
+
+
+
+

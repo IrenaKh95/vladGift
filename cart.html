@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Cart</h1>
+    </header>
+
+    <div class="container">
+        <h2>Малыш, тут лежит весь твой заказ</h2>
+        <div id="cart-items"></div>
+    </div>
+
+    <div class="buttons-container">
+        <button class="nav-button" onclick="openOrderForm()">Оформить заказ</button>
+        <button class="nav-button" onclick="window.location.href='index.html'">Главная</button>
+    </div>
+
+    <footer>
+        <p>С любовью для сладкой булочки ❤️</p>
+    </footer>
+
+    <!-- Модальное окно для оформления заказа  -->
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <h2>Оформление заказа</h2>
+            <form id="order-form" onsubmit="submitOrder(event)">
+                <label for="order-name"><b>Как тебя зовут?</b></label>
+                <input type="text" id="order-name" required>
+                
+                <p><b>Куда все доставить?</b></p>
+                <label><input type="radio" name="delivery" value="В кроватку">В кроватку</label>
+                <label><input type="radio" name="delivery" value="За рабочий стол"> За рабочий стол</label>
+                <label><input type="radio" name="delivery" value="Кушаем вместе"> Кушаем вместе</label>
+
+
+                <p><b>Твой заказ:</b></p>
+                <p id="order-content"></p>
+
+                <label for="order-comments"><b>Особые пожелания:</b></label>
+                <textarea id="order-comments" rows="4"></textarea>
+
+                <button type="submit" class="nav-button">Завершить оформление</button>
+                <button type="button" class="nav-button-close" onclick="closeOrderForm()">Закрыть</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <!-- Модальное окно для подтверждения  -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <button class="nav-button-close" onclick="closeModal()">Закрыть</button>
+        </div>
+    </div> 
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+

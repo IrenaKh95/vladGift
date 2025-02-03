@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massages</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Massages Options</h1>
+    </header>
+
+    <div class="container">
+        <h2>Выбери любой массажик</h2>
+        <div class="item">
+            <div id="img-text-style">
+            <img src="img/massage2.jpg" alt="Массаж головы" onclick="openImageModal('Массаж головы: 5 минут')">
+            <h3>Массаж головы</h3>
+            </div>
+            <ul>
+                <li>Длительность: 5 минут</li>
+                <li>Пожмякаю головку</li>
+            </ul>
+            <button class="nav-button" onclick="addToCart('Массаж головы', '5 минут')">Добавить в корзину</button>
+        </div>
+
+        <div class="item">
+            <div id="img-text-style">
+            <img src="img/massage1.jpg" alt="Массаж только спинки" onclick="openImageModal('Массаж только спинки: 7 минут')">
+            <h3>Массаж только спинки</h3>
+            </div>
+            <ul>
+                <li>Длительность: 7 минут</li>
+                <li>Пожмякаю спинку руками, пройдусь и прохрущу</li>
+            </ul>
+            <button class="nav-button" onclick="addToCart('Массаж только спинки', '7 минут')">Добавить в корзину</button>
+        </div>
+
+        <div class="item">
+            <div id="img-text-style">
+            <img src="img/massage3.jpg" alt="Массаж спинка + ножки" onclick="openImageModal('Массаж спинка + ножки: 10 минут')">
+            <h3>Массаж спинка + ножки</h3>
+            </div>
+            <ul>
+                <li>Длительность: 10 минут</li>
+                <li>Пожмякаю спинку и ножки руками (можно добавить массажер, либо руки заменить на ножки - для прожмякивания твоих ножек)</li>
+            </ul>
+            <button class="nav-button" onclick="addToCart('Массаж спинка + ножки', '10 минут')">Добавить в корзину</button>
+        </div>
+
+        <div class="item" style="display: flex; flex-direction: column; align-items: flex-start;">
+            <div id="img-text-style">
+                <img src="img/massage4.jpg" alt="Массаж спинка + ножки + булочки" onclick="openImageModal('Массаж спинка + ножки + булочки: 12 минут')" style="margin-right: 10px;">
+                <h3>Массаж спинка + ножки + булочки</h3>
+            </div>
+            <ul>
+                <li>Длительность: 12 минут</li>
+                <li>Пожмякаю спинку - ручками, ножки и булочки - ножками</li>
+            </ul>
+            <button class="nav-button" onclick="addToCart('Массаж спинка + ножки + булочки', '12 минут')">Добавить в корзину</button>
+        </div>
+        
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <button class="close-modal" onclick="closeModal()">Закрыть</button>
+        </div>
+    </div>
+
+    <div id="image-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="image-modal-title"></h2>
+            <p id="image-modal-description"></p>
+            <button class="close-modal" onclick="closeImageModal()">Закрыть</button>
+        </div>
+    </div>
+
+    <div class="buttons-container">
+        <button class="nav-button" onclick="window.location.href='index.html'">Главная</button>
+        <button class="nav-button" onclick="window.location.href='breakfast.html'">Завтраки</button>
+        <button class="nav-button" onclick="window.location.href='cart.html'">Корзина</button>
+    </div>
+
+    <footer>
+        <p>Сайт разработан с любовью для сладкой булочки ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
