@@ -1,26 +1,55 @@
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/background.jpg') center/cover no-repeat;
+    filter: blur(3px); /* Размытие (можно менять) */
+    z-index: -1; /* Фон уходит назад */
+}
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f7f7f7;
-    color: #333;
+    color: #22290A;  /*NEW*/
     min-height: 100vh;
 } 
 
 footer {
+    background: linear-gradient(to bottom, rgba(214, 230, 172, 0.8), rgba(175, 201, 126, 0.6)); 
     text-align: center;
-    background-color: #ffcccb;
     padding: 10px;
-    margin-top: 20px;
+
+    width: 90%; /* Ширина футера */
+    max-width: 1200px; /* Ограничение ширины */
+    margin: 20px auto; /* Центрируем и добавляем отступ сверху */
+
+    border-radius: 16px; /* Закруглённые углы */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
+
     position: relative;
-    z-index: 1;
+    z-index: 10;
+
+    font-size: medium;
 }
 
 header {
-    background-color: #ffcccb;
+    background: linear-gradient(to bottom, rgba(214, 230, 172, 0.8), rgba(175, 201, 126, 0.6));
     padding: 20px;
     text-align: center;
+
+    width: 90%; /* Ширина хэдера */
+    max-width: 1200px; /* Ограничение по ширине */
+    margin: 20px auto; /* Центрируем и отодвигаем от краёв */
+
+    border-radius: 16px; /* Закруглённые углы */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Тень, создающая "отдельный" эффект */
+
+    position: relative; /* Чтобы элемент не был сжат другими блоками */
+    z-index: 10;
 }
 
 header h1 {
@@ -28,15 +57,92 @@ header h1 {
     font-size: 1.8em;
 }
 
+
 .container {
-    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, rgba(214, 230, 172, 0.8), rgba(175, 201, 126, 0.6)); 
+    color: #22290A;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
+
+/* ДЛЯ БОЛЬШИХ ЭКРАНОВ (от 1632px и меньше) */
+@media (max-width: 1632px) {
+    .container {
+        max-width: 1200px;
+        padding: 18px;
+    }
+}
+
+/* ДЛЯ СРЕДНИХ ЭКРАНОВ (от 1248px и меньше) */
+@media (max-width: 1248px) {
+    .container {
+        max-width: 1000px !important;
+        padding: 15px;
+    }
+}
+
+/* ДЛЯ НОУТБУКОВ И ПЛАНШЕТОВ (от 960px и меньше) */
+@media (max-width: 960px) {
+    .container {
+        max-width: 860px;
+        padding: 12px;
+    }
+}
+
+/* ДЛЯ ПЛАНШЕТОВ (от 768px и меньше) */
+@media (max-width: 768px) {
+    .container {
+        max-width: 690px;
+        padding: 10px;
+    }
+}
+
+/* ДЛЯ МОБИЛЬНЫХ ЭКРАНОВ (от 375px и меньше) */
+@media (max-width: 375px) {
+    .container {
+        max-width: 330px;
+        padding: 8px;
+    }
+}
+
+
+/*
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(to bottom, rgba(214, 230, 172, 0.8), rgba(175, 201, 126, 0.6)); 
+    color: #22290A;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+@media screen and (max-width: 1632px) {
+    .container {
+        max-width: 1300px !important;
+    }
+}
+
+@media screen and (max-width: 1248px) {
+    .container {
+        max-width: 900px;
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        max-width: 300px;
+        padding: 10px;
+    }
+}
+*/
 
 .item {
     display: flex;
@@ -65,20 +171,36 @@ header h1 {
 
 .nav-button {
     padding: 10px 20px;
-    background-color: #ff8080;
-    color: white;
+    background: linear-gradient(to bottom, rgba(241, 215, 149, 0.8), rgba(241, 215, 149, 0.6)); /* Градиент на основе исходного цвета */
+    color: #201302;
+    font-weight: 540;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     margin-top: auto; /* Автоматически сдвигает кнопку вниз */
 }
 
+.nav-button:hover {
+    background: linear-gradient(to bottom, rgba(155, 126, 53, 0.8), rgba(241, 215, 149, 0.6)); /* Градиент на основе исходного цвета */
+    color: #201302;
+}
+
 /* кнопка удаления заказа в корзине */
 
 .nav-button-delete {
     padding: 10px 20px;
-    background-color: #696969;
-    color: white;
+    background: linear-gradient(to bottom, rgba(187, 185, 182, 0.8), rgba(187, 185, 182, 0.6)); /* Градиент */
+    color: #3B3A39;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: auto; /* Автоматически сдвигает кнопку вниз */
+}
+
+.nav-button-delete:hover {
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, rgba(74, 67, 58, 0.8), rgba(187, 185, 182, 0.6)); /* Градиент */
+    color: #3B3A39;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -88,16 +210,22 @@ header h1 {
 /* кнопка закрытия модалки оформления заказа в корзине */
 .nav-button-close {
     padding: 10px 20px;
-    background-color: #696969;
-    color: white;
+    background: linear-gradient(to bottom, rgba(187, 185, 182, 0.8), rgba(187, 185, 182, 0.6)); /* Градиент */
+    color: #3B3A39;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     margin-top: auto; /* Автоматически сдвигает кнопку вниз */
 }
 
-.nav-button:hover {
-    background-color: #ff6666;
+.nav-button-close:hover {
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, rgba(74, 67, 58, 0.8), rgba(187, 185, 182, 0.6)); /* Градиент */
+    color: #3B3A39;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: auto; /* Автоматически сдвигает кнопку вниз */
 }
 
 /* Стили для модального окна */
@@ -115,7 +243,8 @@ header h1 {
 }
 
 .modal-content {
-    background-color: white;
+    background: white;
+    color:#22290A;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -134,8 +263,8 @@ header h1 {
 }
 
 .close-modal {
-    background-color: #ff8080;
-    color: white;
+    background: linear-gradient(to bottom, rgba(241, 215, 149, 0.8), rgba(241, 215, 149, 0.6)); /* Градиент на основе исходного цвета */
+    color: #201302;
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
@@ -144,11 +273,11 @@ header h1 {
 }
 
 .close-modal:hover {
-    background-color: #ff6666;
+    background: linear-gradient(to bottom, rgba(155, 126, 53, 0.8), rgba(241, 215, 149, 0.6)); /* Градиент на основе исходного цвета */
+    color: #201302;
 }
 
 /* контейнер для кнопок рядом*/
-
 .buttons-container {
     display: flex;
     justify-content: center;
@@ -185,38 +314,35 @@ header h1 {
 
 .alert-modal .alert-content p {
     margin: 10px 0;
+    font-size: large;
+    font-weight: 550;
 }
 
 .alert-modal .alert-content button {
     margin: 20px;
     padding: 10px 20px;
-    background-color: #ff8080;
-    color: white;
+    background: linear-gradient(to bottom, rgba(241, 215, 149, 0.8), rgba(241, 215, 149, 0.6)); /* Градиент на основе исходного цвета */
+    color: #201302;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     margin-top: 10px;
 }
 
+@media screen and (max-width: 768px) {
+    .alert-modal .alert-content button{
+        margin: 10px;
+    }
+}
+
 .alert-modal .alert-content button:hover {
-    background-color: #ff6666;
+    background: linear-gradient(to bottom, rgba(155, 126, 53, 0.8), rgba(241, 215, 149, 0.6)); /* Градиент на основе исходного цвета */
+    color: #201302;
 }
 
 
 /* Адаптивные стили */
-@media screen and (max-width: 1632px) {
-    .container {
-        max-width: 1350px;
-    }
-}
-
 @media screen and (max-width: 1248px) {
-    .container {
-        max-width: 900px;
-        padding: 15px;
-        text-align: center;
-    }
-
     .item img {
         max-width: 80px;
     }
@@ -226,12 +352,6 @@ header h1 {
     header h1 {
         font-size: 1.5em;
     }
-
-    .container {
-        max-width: 300px;
-        padding: 10px;
-    }
-
     .item img {
         max-width: 80px;
     }
@@ -239,18 +359,6 @@ header h1 {
     .cart-button {
         padding: 8px 15px;
         font-size: 0.9em;
-    }
-
-    .slider {
-        width: 300px !important; /* Сужаем слайдер */
-    }
-
-    .slider_img {
-        width: 300px !important;
-    }
-
-    .slider_line {
-        width: 300px !important;
     }
 }
 
@@ -275,9 +383,7 @@ header h1 {
     margin: 10px 0;
 }
 
-
 /* слайдер */
-
 .slider{
     width: 500px ;
     overflow: hidden;
@@ -298,45 +404,31 @@ header h1 {
     flex: 0 0 auto;
 }
 
-/* .slider_btn_prev{
-    position: absolute;
-    left: -50px;
-    top: 50%;
-    transform: translateY(-50%) rotate(180deg);
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 8px;
 
-    color: #ff6666;
-    background-color: transparent;
-    border: 1px solid;
-    line-height: 1;
+@media screen and (max-width: 768px) {
+    .slider {
+        width: 370px !important; /* Сужаем слайдер */
+    }
+
+    .slider_img {
+        width: 370 !important;
+    }
+
+    .slider_line {
+        width: 370 !important;
+    }
 }
 
-.slider_btn_next{
-    position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 8px;
+@media screen and (max-width: 375px) {
+    .slider {
+        width: 300px !important; /* Сужаем слайдер */
+    }
 
-    color: #ff6666;
-    background-color: transparent;
-    border: 1px solid;
-    line-height: 1;
+    .slider_img {
+        width: 300px !important;
+    }
+
+    .slider_line {
+        width: 300px !important;
+    }
 }
-
-.slider_btn_prev:hover, .slider_btn_next:hover{
-    background-color: #696969;
-    color: #ffff;
-    opacity: 1;
-} */
-
-
-
-
-
-
-
