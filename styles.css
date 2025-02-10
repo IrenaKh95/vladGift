@@ -1,3 +1,25 @@
+header {
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    background: linear-gradient(to bottom, rgba(214, 230, 172, 0.8), rgba(175, 201, 126, 0.6));
+    padding: 20px;
+    text-align: center;
+    width: 90%; 
+    max-width: 1200px; 
+    margin: 20px auto; 
+    border-radius: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative; 
+    z-index: 10;
+}
+
+header h1 {
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    margin: 0;
+    font-size: 30px;
+}
+
 .background {
     position: fixed;
     top: 0;
@@ -14,51 +36,34 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f7f7f7;
-    color: #22290A;  /*NEW*/
+    color: #22290A;
     min-height: 100vh;
 } 
 
 footer {
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
     background: linear-gradient(to bottom, rgba(214, 230, 172, 0.8), rgba(175, 201, 126, 0.6)); 
     text-align: center;
     padding: 10px;
+    bottom: 0;
 
-    width: 90%; /* Ширина футера */
-    max-width: 1200px; /* Ограничение ширины */
-    margin: 20px auto; /* Центрируем и добавляем отступ сверху */
+    width: 90%; 
+    max-width: 1200px; 
+    margin: 20px auto;
 
-    border-radius: 16px; /* Закруглённые углы */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
+    border-radius: 16px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 
     position: relative;
-    z-index: 10;
-
+    z-index: 3;
     font-size: medium;
-}
-
-header {
-    background: linear-gradient(to bottom, rgba(214, 230, 172, 0.8), rgba(175, 201, 126, 0.6));
-    padding: 20px;
-    text-align: center;
-
-    width: 90%; /* Ширина хэдера */
-    max-width: 1200px; /* Ограничение по ширине */
-    margin: 20px auto; /* Центрируем и отодвигаем от краёв */
-
-    border-radius: 16px; /* Закруглённые углы */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Тень, создающая "отдельный" эффект */
-
-    position: relative; /* Чтобы элемент не был сжат другими блоками */
-    z-index: 10;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 1.8em;
-}
-
+} 
 
 .container {
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
     margin: 20px auto;
     padding: 20px;
     background: linear-gradient(to bottom, rgba(214, 230, 172, 0.8), rgba(175, 201, 126, 0.6)); 
@@ -68,81 +73,40 @@ header h1 {
     text-align: center;
 }
 
-/* ДЛЯ БОЛЬШИХ ЭКРАНОВ (от 1632px и меньше) */
-@media (max-width: 1632px) {
+@media (max-width: 1920px) {
     .container {
         max-width: 1200px;
         padding: 18px;
     }
 }
 
-/* ДЛЯ СРЕДНИХ ЭКРАНОВ (от 1248px и меньше) */
-@media (max-width: 1248px) {
+@media (max-width: 1249px) {
     .container {
-        max-width: 1000px !important;
+        max-width: 1100px !important;
         padding: 15px;
     }
 }
 
-/* ДЛЯ НОУТБУКОВ И ПЛАНШЕТОВ (от 960px и меньше) */
-@media (max-width: 960px) {
+@media (max-width: 961px) {
     .container {
-        max-width: 860px;
+        max-width: 850px !important;
         padding: 12px;
     }
 }
 
-/* ДЛЯ ПЛАНШЕТОВ (от 768px и меньше) */
 @media (max-width: 768px) {
     .container {
-        max-width: 690px;
+        max-width: 690px !important;
         padding: 10px;
     }
 }
 
-/* ДЛЯ МОБИЛЬНЫХ ЭКРАНОВ (от 375px и меньше) */
-@media (max-width: 375px) {
+@media (max-width: 400px) {
     .container {
-        max-width: 330px;
+        max-width: 330px !important;
         padding: 8px;
     }
 }
-
-
-/*
-.container {
-    width: 90%;
-    max-width: 1300px;
-    margin: 20px auto;
-    padding: 20px;
-    background: linear-gradient(to bottom, rgba(214, 230, 172, 0.8), rgba(175, 201, 126, 0.6)); 
-    color: #22290A;
-    border-radius: 16px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-@media screen and (max-width: 1632px) {
-    .container {
-        max-width: 1300px !important;
-    }
-}
-
-@media screen and (max-width: 1248px) {
-    .container {
-        max-width: 900px;
-        padding: 15px;
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .container {
-        max-width: 300px;
-        padding: 10px;
-    }
-}
-*/
 
 .item {
     display: flex;
@@ -154,6 +118,7 @@ header h1 {
 }
 
 #img-text-style{
+    font-size: 20px;
     display: flex; 
     align-items: center;
 }
@@ -170,8 +135,11 @@ header h1 {
 }
 
 .nav-button {
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
     padding: 10px 20px;
-    background: linear-gradient(to bottom, rgba(241, 215, 149, 0.8), rgba(241, 215, 149, 0.6)); /* Градиент на основе исходного цвета */
+    background: linear-gradient(to bottom, rgba(241, 215, 149, 0.8), rgba(241, 215, 149, 0.6)); 
     color: #201302;
     font-weight: 540;
     border: none;
@@ -180,14 +148,51 @@ header h1 {
     margin-top: auto; /* Автоматически сдвигает кнопку вниз */
 }
 
+@media screen and (max-width: 1248px) {
+    .nav-button {
+        align-self: center;
+    }
+}
+
 .nav-button:hover {
-    background: linear-gradient(to bottom, rgba(155, 126, 53, 0.8), rgba(241, 215, 149, 0.6)); /* Градиент на основе исходного цвета */
+    background: linear-gradient(to bottom, rgba(155, 126, 53, 0.8), rgba(241, 215, 149, 0.6)); 
     color: #201302;
+}
+
+/* кнопка для заказа в корзине */
+
+.nav-button-confirm{
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, rgba(241, 215, 149, 0.8), rgba(241, 215, 149, 0.6)); 
+    color: #201302;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: auto; /* Автоматически сдвигает кнопку вниз */
+}
+
+.nav-button-confirm:hover {
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, rgba(155, 126, 53, 0.8), rgba(241, 215, 149, 0.6)); 
+    color: #201302;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: auto; /* Автоматически сдвигает кнопку вниз */
 }
 
 /* кнопка удаления заказа в корзине */
 
 .nav-button-delete {
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
     padding: 10px 20px;
     background: linear-gradient(to bottom, rgba(187, 185, 182, 0.8), rgba(187, 185, 182, 0.6)); /* Градиент */
     color: #3B3A39;
@@ -198,8 +203,11 @@ header h1 {
 }
 
 .nav-button-delete:hover {
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
     padding: 10px 20px;
-    background: linear-gradient(to bottom, rgba(74, 67, 58, 0.8), rgba(187, 185, 182, 0.6)); /* Градиент */
+    background: linear-gradient(to bottom, rgba(74, 67, 58, 0.8), rgba(187, 185, 182, 0.6)); 
     color: #3B3A39;
     border: none;
     border-radius: 8px;
@@ -209,23 +217,26 @@ header h1 {
 
 /* кнопка закрытия модалки оформления заказа в корзине */
 .nav-button-close {
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
     padding: 10px 20px;
-    background: linear-gradient(to bottom, rgba(187, 185, 182, 0.8), rgba(187, 185, 182, 0.6)); /* Градиент */
+    background: linear-gradient(to bottom, rgba(187, 185, 182, 0.8), rgba(187, 185, 182, 0.6));
     color: #3B3A39;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    margin-top: auto; /* Автоматически сдвигает кнопку вниз */
+    margin-top: auto; 
 }
 
 .nav-button-close:hover {
     padding: 10px 20px;
-    background: linear-gradient(to bottom, rgba(74, 67, 58, 0.8), rgba(187, 185, 182, 0.6)); /* Градиент */
+    background: linear-gradient(to bottom, rgba(74, 67, 58, 0.8), rgba(187, 185, 182, 0.6)); 
     color: #3B3A39;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    margin-top: auto; /* Автоматически сдвигает кнопку вниз */
+    margin-top: auto; 
 }
 
 /* Стили для модального окна */
@@ -243,6 +254,9 @@ header h1 {
 }
 
 .modal-content {
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
     background: white;
     color:#22290A;
     padding: 20px;
@@ -254,16 +268,24 @@ header h1 {
 }
 
 .modal-content h2 {
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 30px;
     margin-top: 0;
+    margin-bottom: 5px; 
     text-align: center;
 }
 
 .modal-content p {
-    margin: 10px 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .close-modal {
-    background: linear-gradient(to bottom, rgba(241, 215, 149, 0.8), rgba(241, 215, 149, 0.6)); /* Градиент на основе исходного цвета */
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    background: linear-gradient(to bottom, rgba(241, 215, 149, 0.8), rgba(241, 215, 149, 0.6));
     color: #201302;
     border: none;
     padding: 10px 20px;
@@ -273,7 +295,7 @@ header h1 {
 }
 
 .close-modal:hover {
-    background: linear-gradient(to bottom, rgba(155, 126, 53, 0.8), rgba(241, 215, 149, 0.6)); /* Градиент на основе исходного цвета */
+    background: linear-gradient(to bottom, rgba(155, 126, 53, 0.8), rgba(241, 215, 149, 0.6)); 
     color: #201302;
 }
 
@@ -290,6 +312,8 @@ header h1 {
 
 /* Добавление стилей для модального окна, которое появляется с алертом */
 .alert-modal {
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -303,6 +327,8 @@ header h1 {
 } 
 
 .alert-modal .alert-content {
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
     background-color: white;
     padding: 20px;
     border-radius: 8px;
@@ -321,7 +347,7 @@ header h1 {
 .alert-modal .alert-content button {
     margin: 20px;
     padding: 10px 20px;
-    background: linear-gradient(to bottom, rgba(241, 215, 149, 0.8), rgba(241, 215, 149, 0.6)); /* Градиент на основе исходного цвета */
+    background: linear-gradient(to bottom, rgba(241, 215, 149, 0.8), rgba(241, 215, 149, 0.6)); 
     color: #201302;
     border: none;
     border-radius: 8px;
@@ -336,10 +362,9 @@ header h1 {
 }
 
 .alert-modal .alert-content button:hover {
-    background: linear-gradient(to bottom, rgba(155, 126, 53, 0.8), rgba(241, 215, 149, 0.6)); /* Градиент на основе исходного цвета */
+    background: linear-gradient(to bottom, rgba(155, 126, 53, 0.8), rgba(241, 215, 149, 0.6)); 
     color: #201302;
 }
-
 
 /* Адаптивные стили */
 @media screen and (max-width: 1248px) {
@@ -363,12 +388,16 @@ header h1 {
 }
 
 .modal-content form {
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
     display: flex;
     flex-direction: column;
     gap: 15px; /* Добавляем отступы между элементами формы */
 }
 
 .modal-content textarea {
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
     width: auto;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -389,8 +418,8 @@ header h1 {
     overflow: hidden;
     position: relative;
     margin: 20px auto; /* Отступ сверху и снизу 20px, центрирование */
-    border-radius: 8px; /* Скругление углов */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Лёгкая тень для эффекта объёма */
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
 .slider_line{
@@ -407,7 +436,7 @@ header h1 {
 
 @media screen and (max-width: 768px) {
     .slider {
-        width: 370px !important; /* Сужаем слайдер */
+        width: 370px !important; 
     }
 
     .slider_img {
@@ -419,16 +448,16 @@ header h1 {
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
     .slider {
-        width: 300px !important; /* Сужаем слайдер */
+        width: 200px !important;
     }
 
     .slider_img {
-        width: 300px !important;
+        width: 200px !important;
     }
 
     .slider_line {
-        width: 300px !important;
+        width: 200px !important;
     }
 }
