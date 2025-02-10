@@ -72,7 +72,7 @@ function submitOrder(event) {
     const name = document.getElementById('order-name').value;
     const address = document.querySelector('input[name="delivery"]:checked')?.value || 'Не указан';
     const comments = document.getElementById('order-comments').value;
-    const orderDetails = cart.map(item => `${item.name} - ${item.price}`).join('\n');
+    const orderDetails = cart.map(item => `${item.name}`).join('\n');
 
     const message = `
         Новый заказ:
@@ -104,7 +104,7 @@ function sendOrderToTelegram(orderDetails) {
     .then(response => {
         if (response.ok) {
             console.log('Order sent to Telegram successfully!');
-            displayModal('Wow!', 'Твой заказ отправлен! Жди своего абрикосика ❤️');
+            displayModal('WOW!', 'Твой заказ отправлен! Жди своего абрикосика ❤️');
         } else {
             return response.json().then(err => {
                 console.error('Failed to send order:', err.description);
@@ -117,8 +117,6 @@ function sendOrderToTelegram(orderDetails) {
         displayModal('Ошибка', 'Произошла ошибка при отправке заказа. Попробуйте позже.');
     });
 }
-
-
 
 function openImageModal(title, description) {
     const modal = document.getElementById('image-modal');
@@ -185,22 +183,8 @@ const slider = document.querySelector('.slider');
 const sliderImages = document.querySelectorAll('.slider_img');
 const sliderLine = document.querySelector('.slider_line');
 
-// const sliderBtnNext = document.querySelector('.slider_btn_next');
-// const sliderBtnPrev = document.querySelector('.slider_btn_prev');
-
 let sliderCount = 0;
 let sliderWidth = slider.offsetWidth;
-
-// window.addEventListener('resize', () => {
-//     sliderWidth = slider.offsetWidth;
-//     rollSlider(); // Пересчитать сдвиг при изменении ширины экрана
-// });
-
-//перемотка слайдера вперед при нажатии на кнопку вперед
-// sliderBtnNext.addEventListener('click', nextSlide);
-
-//перемотка слайдера назад при нажатии на кнопку назад
-// sliderBtnPrev.addEventListener('click', prevSlide);
 
 function nextSlide() {
     sliderCount++; 
